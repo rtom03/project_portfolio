@@ -24,7 +24,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import DashboardContent from "./shared/DashboardContent";
+import HomeContent from "./shared/HomeContent";
 import AboutContent from "./shared/AboutContent";
 import LatestWorkContent from "./shared/LatestWorkContent";
 import ContactContent from "./shared/ContactContent";
@@ -35,11 +35,11 @@ export function SidebarDemo() {
     const links = [
         {
             label: "Home",
-            href: "/home",
+            href: "/",
             icon: (
                 <IconHome className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
             ),
-            element: <DashboardContent />
+            element: <HomeContent />
         },
         {
             label: "About",
@@ -108,9 +108,8 @@ export function SidebarDemo() {
             className={cn(
                 "rounded-md  flex flex-col md:flex-row bg-gray-100 dark:bg-neutral-800 flex-1 w-full  mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
                 "h-screen" // for your use case, use `h-screen` instead of `h-[60vh]`
-            )}
-        >
-            <Sidebar open={open} setOpen={setOpen}>
+            )}>
+            <Sidebar open={open} setOpen={setOpen} >
                 <SidebarBody className="justify-between gap-10">
                     <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
                         {open ? <Logo /> : <LogoIcon />}
@@ -150,11 +149,13 @@ export function SidebarDemo() {
             {links.map((link) => {
                 const isActive = (pathName.includes(link.href) && link.href.length > 1) || pathName === link.href
                 return isActive ? (
-                    <Link href={link.href} key={link.label} className={`flex w-full h-screen `}>
+                    <Link href={link.href} key={link.label} className="flex w-full scrollable-container overflow-y-auto h-screen  ">
                         <Dashboard>{link.element}</Dashboard>
                     </Link>
-                ) : null;
+                ) : "";
             })}
+
+
         </div>
     );
 }
@@ -205,21 +206,11 @@ interface props {
 }
 export const Dashboard = ({ children }: props) => {
     return (
-        <div className="flex flex-1 relative">
-            <div className="p-2 md:p-10 rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col gap-2 flex-1 w-full h-full">
-                {/* <div className="flex gap-2">
+        <div className="flex flex-1 ">
+            <div className="p-2 md:p-10 rounded-tl-2xl border dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col gap-2 flex-1 w-full">
+                <div className="flex gap-2 flex-1 ">
                     {[...new Array(1)].map((i) => (
-                        <div
-                            key={"first-array" + i}
-                            className="h-20 w-full rounded-lg  bg-gray-100 dark:bg-neutral-800 animate-pulse"
-                        >
-                            { }
-                        </div>
-                    ))}
-                </div> */}
-                <div className="flex gap-2 flex-1">
-                    {[...new Array(1)].map((i) => (
-                        <div key={"second-array" + i} className="h-screen w-full rounded-lg  bg-gray-100 dark:bg-neutral-800 animate-pulse">
+                        <div key={"second-array" + i} className="w-full rounded-lg  dark:bg-neutral-800 animate-pulse">
                             {children}
 
                         </div>

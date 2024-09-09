@@ -1,4 +1,4 @@
-import Dashboard from '@/components/shared/DashboardContent'
+import Dashboard from '@/components/shared/HomeContent'
 import React from 'react'
 
 const Home = () => {

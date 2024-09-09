@@ -6,7 +6,7 @@ const ContactContent = () => {
 
         <div className='ml-32 '>
 
-            <Header data='Connect With Me' />
+            <Header data='ContactMe ✉️' />
         </div>
     )
 }
