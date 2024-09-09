@@ -73,7 +73,7 @@ export default function FloatingDockDemo() {
         },
     ];
     return (
-        <div className="flex flex-col items-center justify-center h-[35rem] w-full">
+        <div className="flex flex-col items-center justify-center w-full">
             <h2 className="font-bold p-6">My Tech Stack</h2>
             <FloatingDock
                 mobileClassName="translate-y-20" // only for demo, remove for production
