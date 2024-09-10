@@ -53,6 +53,7 @@ const LatestWorkContent = () => {
                     className='bg-black p-2 rounded-full z-0'
                 />
             </div> */}
+            <br /><br />
         </div>
     )
 }
