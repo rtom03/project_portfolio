@@ -7,7 +7,7 @@ const ExpertiseContent = () => {
 
         <div className='ml-32 '>
 
-            <Header data='My Expertise ⚡' />
+            <Header data='My Biography ⚡' />
             <BentoGridThirdDemo />
         </div>
     )

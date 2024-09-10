@@ -22,7 +22,7 @@ import {
 import HomeContent from './shared/HomeContent';
 import AboutContent from './shared/AboutContent';
 import Image from 'next/image';
-import ExpertiseContent from './shared/ExpertiseContent';
+import Biography from './shared/Biography';
 import ContactContent from './shared/ContactContent';
 import Articles from './shared/Articles';
 import LatestWorkContent from './shared/LatestWorkContent';
@@ -73,11 +73,11 @@ const Landing = () => {
                     </div>
                     <div className='flex flex-row items-center gap-1 hover:bg-slate-50 rounded-md p-1 hover:text-blue-400'>
                         <IconBrandTabler className='hover:text-blue-400' />
-                        <TabsTrigger value="expertise" onClick={() => setShowSingle(false)}>Expertise</TabsTrigger>
+                        <TabsTrigger value="biography" onClick={() => setShowSingle(false)}>Biography</TabsTrigger>
                     </div>
                     <br /> <br /> <br />
-                    <div className=' bg- mt-96'>
-                        <TabsTrigger value="read" onClick={() => setShowSingle(false)}>Read Resume</TabsTrigger>
+                    <div className=' flex justify-center bg-black p-2 w-36 rounded-full mt-80 text-center mr-10 '>
+                        <TabsTrigger value="read" onClick={() => setShowSingle(false)} className='hover:text-white'>Read Resume</TabsTrigger>
                     </div>
                 </TabsList>
 
@@ -88,15 +88,16 @@ const Landing = () => {
                     </div>
 
                 ) : (
-                    // Block 2
                     <>
-                        <TabsContent value="home" className='flex justify-center ml-96'><HomeContent /></TabsContent>
-                        <TabsContent value="about"><AboutContent /></TabsContent>
-                        <TabsContent value="projects"><LatestWorkContent /></TabsContent>
-                        <TabsContent value="contact"><ContactContent /></TabsContent>
-                        <TabsContent value="articles"><Articles /></TabsContent>
-                        <TabsContent value="expertise"><ExpertiseContent /></TabsContent>
-                        <TabsContent value="read"><WorkHistory /></TabsContent>
+                        <div className='ml-96'>
+                            <TabsContent value="home"><HomeContent /></TabsContent>
+                            <TabsContent value="about"><AboutContent /></TabsContent>
+                            <TabsContent value="projects"><LatestWorkContent /></TabsContent>
+                            <TabsContent value="contact"><ContactContent /></TabsContent>
+                            <TabsContent value="articles"><Articles /></TabsContent>
+                            <TabsContent value="biography"><Biography /></TabsContent>
+                            <TabsContent value="read"><WorkHistory /></TabsContent>
+                        </div>
                     </>
                 )}
 

@@ -282,8 +282,11 @@ const SkeletonFive = () => {
                     className="rounded-full h-10 w-10"
                 />
                 <p className="text-xs text-neutral-500">
-                    There are a lot of cool framerworks out there like React, Angular,
-                    Vue, Svelte that can make your life ....
+                    Ah, Dijkstra's algorithm—because who doesn't love taking the scenic route?
+                    Instead of just guessing a straight line like a normal person, let's
+                    painstakingly calculate the shortest path between two points in a graph.
+                    Why rush when you can obsess over every possible node, one step at a time?
+
                 </p>
             </motion.div>
             <motion.div
@@ -298,10 +301,10 @@ const SkeletonFive = () => {
 };
 const items = [
     {
-        title: "AI Content Generation",
+        title: "Hash Mask $ UnMask",
         description: (
             <span className="text-sm">
-                Experience the power of AI in generating unique content.
+                Oh, a hash table—because who wouldn’t want to cram everything into a magical box and hope collisions just sort themselves out?
             </span>
         ),
         header: <SkeletonOne />,
@@ -323,7 +326,6 @@ const items = [
         title: "Contextual Suggestions",
         description: (
             <span className="text-sm">
-                Get AI-powered suggestions based on your writing context.
             </span>
         ),
         header: <SkeletonThree />,
@@ -334,7 +336,8 @@ const items = [
         title: "Sentiment Analysis",
         description: (
             <span className="text-sm">
-                Understand the sentiment of your text with AI analysis.
+                Because nothing says "efficient" like shuffling through a binary heap to maintain that precious order...
+
             </span>
         ),
         header: <SkeletonFour />,
@@ -346,7 +349,7 @@ const items = [
         title: "Text Summarization",
         description: (
             <span className="text-sm">
-                Summarize your lengthy documents with AI technology.
+                ."What is the unknown? What are the data? What is the condition?"
             </span>
         ),
         header: <SkeletonFive />,
