@@ -28,7 +28,7 @@ import HomeContent from "./shared/HomeContent";
 import AboutContent from "./shared/AboutContent";
 import LatestWorkContent from "./shared/LatestWorkContent";
 import ContactContent from "./shared/ContactContent";
-import ExpertiseContent from "./shared/ExpertiseContent";
+import ExpertiseContent from "./shared/Biography";
 import Articles from "./shared/Articles";
 
 export function SidebarDemo() {
