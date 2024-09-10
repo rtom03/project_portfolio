@@ -132,7 +132,7 @@ const Landing = () => {
 
                 ) : (
                     <>
-                        <div className='w-[700px] lg:ml-96'>
+                        <div className=' lg:ml-96'>
                             <TabsContent value="home"><HomeContent /></TabsContent>
                             <TabsContent value="about"><AboutContent /></TabsContent>
                             <TabsContent value="projects"><LatestWorkContent /></TabsContent>
