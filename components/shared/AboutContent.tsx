@@ -34,10 +34,10 @@ const AboutContent = () => {
                     alt='/'
                     width={150}
                     height={150}
-                    className=' rounded-md ml-5 h-64 w-40'
+                    className=' hidden lg:rounded-md ml-5 h-64 w-40'
                 />
             </div><br />
-            <div className='w-[800px]'>
+            <div className=':w-[800px] lg:w-[800px] md:[800px]'>
                 <article className='text-gray-500'>
                     <p>
                         Hey there, I'm Tom - a passionate developer, avid writer, and a connoisseur of awesome design. Welcome to my corner of the digital world!

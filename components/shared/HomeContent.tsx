@@ -8,7 +8,7 @@ import Shared from './Shared'
 const HomeContent = () => {
     return (
 
-        <div className='flex flex-col ml-32  justify-center '>
+        <div className='flex flex-col ml-32   '>
 
             <Header data='Hello There 👋 I"m Tom' subHeader="I'm a full-stack developer that loves building products and web apps that can impact millions of lives
               " sub="I'm a senior software engineer with 7 years of experience building scalable web apps that are performance optimized and good looking." />
