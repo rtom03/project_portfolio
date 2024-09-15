@@ -36,8 +36,6 @@ const Articles = () => {
                     icon='Great Book 📖'
                 />
             </div>
-
-            <br /><br /><br />
         </div>
     )
 }

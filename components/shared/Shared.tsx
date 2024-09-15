@@ -28,7 +28,7 @@ const Shared = ({ data, image, header, sub, span, link }: Sharedrops) => {
                     <div className='flex flex-col'>
                         <h2 className='text-xl font-bold'>{header}</h2><br />
                         <span className='text-xs text-gray-500'>{span}</span>
-                        <br /><br /><br />
+                     
                         <div className='flex flex-row items-center w-[520px] justify-between mt-8 lg:w-[520px] md:w-[400px]'>
                             <h3 className='text-xs font-bold text-gray-500'>NextJs,Typescript,Tailwindcss</h3>
                             <Link href={link}>

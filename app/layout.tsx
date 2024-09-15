@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { SidebarDemo } from "@/components/Home";
-import Landing from "@/components/Landing";
+import Landing, { BottomBar } from "@/components/Landing";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,7 +29,16 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}>
-        {children}
+        {/* {children} */}
+        <div className="flex flex-col">
+          <div className="flex sm:hidden md:flex">
+          <Landing />
+          </div>
+        
+          <div className="flex fixed bottom-0 z-10 w-full rounded-t-3xl bg-glassmorphism p-4 justify-center lg:hidden md:hidden">
+          <BottomBar />
+          </div>
+        </div>
 
       </body>
     </html>

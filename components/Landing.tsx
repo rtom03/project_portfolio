@@ -33,33 +33,40 @@ import { div } from 'framer-motion/client';
 import { SidebarLink } from './ui/sidebar';
 import Link from 'next/link';
 
+export const BottomBar = (type:any)=>{
+    const [showSingle, setShowSingle] = useState(true);
+
+    return(
+        <div>
+            <Tabs className='flex flex-col'>
+                <div className='flex flex-1 w-[300px]'>
+                <TabsContent value="home"><HomeContent /></TabsContent>
+                </div>
+            <TabsList className='flex flex-row'>
+            <TabsTrigger value="home" onClick={() => setShowSingle(true)} className='flex gap-1 items-center'> <IconBolt className='hover:text-blue-400 ' /><h2 className='hidden lg:flex '>Home</h2></TabsTrigger>
+            <TabsTrigger value="about" onClick={() => setShowSingle(false)} className='flex  gap-1 items-center'> <IconUserBolt className='hover:text-blue-400' /></TabsTrigger>
+            <TabsTrigger value="projects" onClick={() => setShowSingle(false)} className='flex  gap-1 items-center'> <IconContrastFilled className='hover:text-blue-400' /></TabsTrigger>
+            <TabsTrigger value="about" onClick={() => setShowSingle(false)} className='flex  gap-1 items-center'> <IconUserBolt className='hover:text-blue-400' /></TabsTrigger>
+            <TabsTrigger value="articles" onClick={() => setShowSingle(false)} className='flex  gap-1 items-center'> <IconArticle className='hover:text-blue-400' /></TabsTrigger>
+            <TabsTrigger value="contact" onClick={() => setShowSingle(false)} className='flex  gap-1 items-center'><IconMessage className='hover:text-blue-400' /></TabsTrigger>
+            </TabsList>
+
+          
+
+            </Tabs>
+        </div>
+    )
+}
+
+
 const Landing = () => {
     const [showSingle, setShowSingle] = useState(true);
-    const social = [
-        {
-            label: 'Github',
-            href: 'https://github.com/rtom03',
-            icon: (<IconBrandGithub color="gray" />)
-        },
-        {
-            label: 'Linkdln',
-            href: 'https://www.linkedin.com/in/tomiwa-raheem-33233a324/',
-            icon: (<IconBrandLinkedin color="gray" />)
-        }, {
-            label: 'Instagram',
-            href: '',
-            icon: (<IconBrandInstagram color="gray" />)
-        }, {
-            label: 'X/Twitter',
-            href: '',
-            icon: (<IconBrandTwitter color="gray" />)
-        },
-    ]
+   
     return (
         <div>
             <Tabs defaultValue="account" className="flex flex-row w-screen ">
 
-                <TabsList className='flex flex-col w-[200px] bg-gray-100 border-r-2 h-screen p-10 gap-6  text-sm font-medium fixed  sm:w-[150px] md:w-[100px]  lg:w-[200px] '>
+                <TabsList className='flex flex-col w-[200px]  border-r-2 h-screen p-10 gap-6  text-sm font-medium fixed   sm:bg-slate-500 md:w-[100px]   md:bg-black lg:w-[200px] lg:bg-black '>
                     <div className='flex flex-row items-center gap-2'>
                         <Image
                             src='/image/rtom.jpeg'
@@ -126,13 +133,13 @@ const Landing = () => {
 
                 {showSingle ? (
                     // Block 1
-                    <div className='flex-1 w-[500px]  lg:ml-96 mt-2'>
+                    <div className='ml-96 pl-40 mt-2 lg:ml-96 lg:pl-40 md:pl-0 md:ml-16'>
                         <HomeContent />
                     </div>
 
                 ) : (
                     <>
-                        <div className=' lg:ml-96'>
+                        <div className='ml-96 pl-40  lg:ml-96 lg:pl-40 md:pl-0 md:ml-16'>
                             <TabsContent value="home"><HomeContent /></TabsContent>
                             <TabsContent value="about"><AboutContent /></TabsContent>
                             <TabsContent value="projects"><LatestWorkContent /></TabsContent>
@@ -143,8 +150,6 @@ const Landing = () => {
                         </div>
                     </>
                 )}
-
-
             </Tabs>
 
         </div>

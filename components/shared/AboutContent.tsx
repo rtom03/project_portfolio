@@ -34,7 +34,7 @@ const AboutContent = () => {
                     alt='/'
                     width={150}
                     height={150}
-                    className=' hidden lg:rounded-md ml-5 h-64 w-40'
+                    className=' flex rounded-md ml-5 h-64 w-40 max-md:hidden'
                 />
             </div><br />
             <div className=':w-[800px] lg:w-[800px] md:[800px]'>
